@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
     before_action :find_post, only: [:show, :edit, :update, :destroy]
     def index
+        @posts = Post.all.limit(3).order("created_at desc")
     end
     def new
         @post =Post.new
@@ -13,9 +14,23 @@ class PostsController < ApplicationController
     else
         render 'new', notice: "Oh no, Busra! I was unable to save your post."
     end
-end
-def show
-end
+    end
+    def show
+    end
+    def edit
+    end
+    def update
+        if @post.update post_params
+        redirect_to @post, notice: "Huzzah! Your article was succesfully saved!"
+        else
+            render 'edit'
+        end
+    end
+    def destroy
+        @post.destroy
+        redirect_to posts_path
+    end
+
 
     private
     def post_params

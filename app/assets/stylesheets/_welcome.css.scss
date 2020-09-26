@@ -1,0 +1,58 @@
+
+.col-1, .col-2, .col-3{ //hakkımda, yazığım şeyler seçeneklerini yan yana sıraladım
+    float: left;
+}
+.col-1{
+    width: 45%;
+    padding:0 5% 0 2.5%
+}
+.col-2, .col-3{
+    width: 27.5%;
+    padding: 0 2.5%;
+}
+.homepage_content{
+    h2{//homepage classındaki h2 başlıklarını boyutunu ayarladık.
+        font-size:1.1rem;
+        text-transform: uppercase;
+    }
+
+
+h3 //h3deki yazıların boyutunu ayarladık.
+    {
+     font-size:1.35em;
+    font-weight: 400;
+    margin-bottom: .5em;
+
+    }
+
+    a{
+        text-decoration: none;
+        color: $dark;
+        &:hover{
+            color: $highlight;
+        }
+    }
+    .date{
+        font-size: .85em;
+        margin-bottom: 2em;
+        color: $light;
+    }   
+
+    
+    .date{ //ana sayfadaki tarihlerin yazı tipini ayarladık.
+        font-size: .85em;
+        margin-bottom: 2em;
+        color: $light;
+    }
+    p{ //hakkında kısmında yazdığım şeylerin arasındaki boşluğu ayarladım.
+        margin: 0 0 .75em 0;
+    }
+}
+.about{
+    padding: 0 7.5% 0 0;
+a{
+    color: $highlight;
+    font-weight: 700;
+    text-decoration: none;
+}
+}

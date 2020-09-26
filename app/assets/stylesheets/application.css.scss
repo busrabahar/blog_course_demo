@@ -1,0 +1,172 @@
+@import 'normalize';
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #8bc6bd;
+$border: #E9E9E9;
+$white: #FFFFFF;
+
+*{ //bu komutu ekledigimizde col-1e yapılan genişlik her sütüna eklenmemiş oldu ve projeler kısmı da yazdığım şeylerin yanına geldi.
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway',sans-serif;
+}
+.wrapper{ //hakkinda, yazdigim seyler vs olan yeri saga dogru kaydırdık
+    width:90%;
+    margin:0 auto;
+   // padding: 4rem 0; //boşluğu ayarladık.
+}
+
+.skinny_wrapper{ //makaleler sayfasındaki makale isimlerini düzenliyorum
+    width: 80%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.wrapper_padding{
+    padding:4rem 0;
+}
+
+
+.clearfix:before, .clearfix::after{ // üst menüdeki çizgiyle isim başlığı arasındaki boşluğu ayarladık.
+    content: " ";
+    display: table;
+}
+.clearfix::after{
+    clear: both;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li{ //başlıkların rengini ve büyüklüklerini ayarladık.
+    color:$dark;
+}
+h1  {
+    font-size:2.5rem;
+    }
+h2
+    {
+    font-size:2rem;
+    }
+h3
+    {
+    font-size:1.75rem;
+    }
+h4
+    {
+    font-size:1.375rem;
+    }
+h5
+{
+    font-size:1.25rem;
+}
+h6
+{
+    font-size:2.5rem;
+}
+p,li
+{
+    font-size:1.1rem;
+    line-height:1.75;
+}
+p,ul,ol
+{
+  margin:0 0 1.6em 0; /*margin html elementinin cevresi ile
+ ona komsu başka elemntiarasında belirtilen miktarda genişletip boşuk
+ yaratır*/
+}
+
+hr{ //homepagedeki cizgilerin boyutunu ayarladık.
+    width: 3em;
+    display:block;
+    height:2px;
+    border:0;
+    border-top:2px solid $highlight;
+    margin: 2rem 0;
+
+}
+#main_navigation{
+    padding: 2.5em 5%;
+    border-bottom: 1px solid $border; //üst menünün altındaki çizgiyi oluşturduk
+    .name{//name etiketli alanı düzenliyoruz.
+        font-weight: 700;
+        font-size: .85em;//ismin boyutunu ayarladık.
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        border: 2px solid $border;
+        padding: 1rem;
+        text-decoration: none;
+        color: $dark;
+        float: left;
+    }
+    nav{ //articler, project ve contact menüsünü sağa aldık. Düzenledik.
+        float: right;
+        padding-top: 1.5rem; //menünün yukarıya olan boşluğunu ayarladık.
+        a{
+            color: $dark;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+
+        }   
+    }
+}
+#page_title{
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 1px solid $border;
+    padding: 3em 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+
+
+#main_footer{ //idler # ile tanıtılıp ozellikleri yazılır.
+    padding: 2.5em 5%;
+    border-top: 1 px solid $border;
+    .copyright{
+        float: left;
+        font-size:.9em;
+        margin: 0;
+    }
+    nav{
+        float: right;
+        i{
+            color: $dark;
+            margin-left: 1em;
+            padding-top: .2em;
+            &:hover{
+                color:$highlight;
+            }
+        }
+    }
+    
+}
+input[type="text"], input[type="email"],
+input[type="password"], textarea{
+    width: 100%;
+    max-width: 100%;
+    height: 3em;
+    border: 2px solid $border;
+    padding: 1em;
+    margin: .5em 0 2em 0;
+}
+textarea{
+    min-height: 20em;
+}
+input[type="submit"], .button{
+    outline:none;
+    background: transparent;
+    border: 2px solid $border;
+    text-align: center;
+    font-size: 1em;
+    color: $dark;
+    text-decoration: none;
+    padding: 1em 2em;
+    &:hover{
+        border: 2px solid $highlight;
+        color: $highlight;
+    }
+
+}
+@import 'welcome'; //programa sadece application sccsi compile ettiriyoruz, digerlerini burda import ettik application kendi cagiracak.
+@import 'posts_projects';
