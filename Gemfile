@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~>3.2.3'
+gem 'friendly_id', '~> 5.1.0'
 
 
 group :development, :test do
